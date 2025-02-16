@@ -10,6 +10,10 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  GITHUB_ACTIONS: true
+  GITHUB_REPOSITORY: ${{ github.repository }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
