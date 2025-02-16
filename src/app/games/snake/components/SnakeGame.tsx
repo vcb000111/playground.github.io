@@ -24,7 +24,7 @@ export function SnakeGame({
   shouldReset
 }: SnakeGameProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const gameLoopRef = useRef<number>();
+  const gameLoopRef = useRef<number | undefined>(undefined);
   const snakeRef = useRef<{ x: number; y: number }[]>([{ x: 10, y: 10 }]);
   const foodRef = useRef<{ x: number; y: number }>({ x: 5, y: 5 });
   const directionRef = useRef<{ x: number; y: number }>({ x: 1, y: 0 });
